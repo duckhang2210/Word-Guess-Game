@@ -1,0 +1,42 @@
+
+
+*{  
+    font-family: 'Thasadith','Chau Philomene One', 'Homenaje','Metrophobic', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #cecec1;
+    line-height: 40px;
+    font-size: 110%;
+}
+#background {
+    background-image: url('../images/wp2062228.jpg');
+    
+    background-position: center center;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: -10;
+    
+}
+#background-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+    background-color: rgba(0,0,0,0.2);
+}
+
+
+
+.container{
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 20%;
+    left: 20%;
+    text-align: center; 
+}
