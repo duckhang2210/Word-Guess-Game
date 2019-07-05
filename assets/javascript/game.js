@@ -21,6 +21,7 @@ var answers = ["ghost", "rhaegar targaryen", "robert baratheon", "westeros", "lo
 var randomQuestion = document.getElementById("questionShow");
 var ansLetterCount = document.getElementById("letterCount");
 var answerInput = document.getElementById("answerShow");
+var lastAns = document.getElementById("lastAnswer");
 var guestCount;
 
 var guessedLet; //put all the letters that already guessed to this array.
@@ -175,16 +176,20 @@ document.onkeypress = function(event){
     }
     ansLetterCount.innerHTML = howManyLetter();
   }
+
+    //Win or Lose function
   function winOrLose(){
     if (underScore.join('') === noSpaceAns(theAnswer)){
         score = score + 1;
       document.getElementById("scoreShow").innerHTML = score;
       setTimeout(()=>{alert('Correct')},0);
       setTimeout(()=>{resetGame(),1});
+      lastAns.innerHTML = theAnswer;
     }else
     if (guestCount == 0){
       setTimeout(()=>{alert("SHAME! SHAME! SHAME! SHAME!")},0);
       setTimeout(()=>{begin(),1});
+      lastAns.innerHTML = theAnswer;
     }
     
    }
